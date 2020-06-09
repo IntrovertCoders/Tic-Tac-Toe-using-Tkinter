@@ -40,7 +40,6 @@ def update_button(btn):
         move -= 1
         messagebox.showwarning("Warning", "Button Already Clicked")
     if move <= 9:
-        print(move)
         if check_win() == 1:
             Xscore += 1
             messagebox.showinfo("Congratulations", "Player X won")
@@ -60,8 +59,6 @@ def update_button(btn):
             else:
                 root.destroy()
     if move == 9 and check_win() == -1:
-        print("else")
-        print(move)
         messagebox.showinfo("Ouchh", "It's a TIE")
         if messagebox.askyesno("New Game", "Do you want to start a new Game?"):
             btn_reset()
